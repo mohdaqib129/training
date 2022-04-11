@@ -25,6 +25,10 @@ function App() {
 
   //Set operation State
   const operations = (i) => {
+    if(number1===""){
+      alert("please select digit");
+      return ;
+    }
     setToggle(true);
     if(i==="+"){
       setOperation("+");
@@ -49,9 +53,9 @@ function App() {
   // Set number State
   const numbers = (i) =>{
     if(toggle){
-      setNumber2(parseInt(number2 + i))
+      setNumber2(parseInt(number2 + i));
     }else{
-      setNumber1(parseInt(number1 + i))
+      setNumber1(parseInt(number1 + i));
     }
   } 
 
